@@ -1,4 +1,5 @@
 import { alpha, makeStyles } from '@material-ui/core/styles';
+import styled from "styled-components";
 
 export const useStyles = makeStyles((theme) => ({
     root: {
@@ -54,3 +55,7 @@ export const useStyles = makeStyles((theme) => ({
         },
     },
 }));
+
+export const WrapperLink = styled.a`
+  text-decoration: none,
+`;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useStyles } from "./styled.js"
+import { useStyles, WrapperLink } from "./styled.js"
 import useGithub from "../../hooks/github-hooks";
 import AppBar from '../AppBar/index';
 import Toolbar from '../Toolbar/index';
@@ -24,14 +24,18 @@ export default function SearchAppBar() {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <IconButton
-                        className={classes.menuButton}
-                        color="inherit"
-                    >
-                        <GithubIcon />
-                    </IconButton>
+                    <WrapperLink href="https://github.com/gustavo-mmh" target="_blank" rel="noreferrer">
+                        <IconButton
+                            title="Logo Git" className={classes.menuButton}
+                            color="inherit"
+                        >
+                            <GithubIcon />
+                        </IconButton>
+                    </WrapperLink>
                     <Typography className={classes.title} variant="h6" noWrap>
-                        Api Github
+                        <WrapperLink href="./" target="_self" >
+                            Api Github
+                        </WrapperLink>
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
